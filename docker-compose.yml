@@ -25,6 +25,13 @@ services:
       placement:
         constraints:
           - node.role == manager
+      resources:
+        limits:
+          cpus: '0.50'     
+          memory: 512M     
+        reservations:
+          cpus: '0.25'     
+          memory: 256M    
 
   inventory-service:
     image: inventory-service:1.0
@@ -35,6 +42,13 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+      resources:
+        limits:
+          cpus: '0.50'     
+          memory: 512M     
+        reservations:
+          cpus: '0.25'     
+          memory: 256M    
 
   product-service:
     image: product-service:1.0
@@ -45,6 +59,13 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+      resources:
+        limits:
+          cpus: '0.50'     
+          memory: 512M     
+        reservations:
+          cpus: '0.25'     
+          memory: 256M    
 
   order-service:
     image: order-service:1.0
@@ -55,6 +76,13 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+      resources:
+        limits:
+          cpus: '0.50'     
+          memory: 512M     
+        reservations:
+          cpus: '0.25'    
+          memory: 256M    
 
   api-gateway:
     image: api-gateway:1.0
@@ -70,3 +98,10 @@ services:
     deploy:
       mode: replicated
       replicas: 2
+      resources:
+        limits:
+          cpus: '0.30'    
+          memory: 256M     
+        reservations:
+          cpus: '0.10'     
+          memory: 256M    
