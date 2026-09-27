@@ -9,4 +9,4 @@ Comando para checar a criação dos serviços
 
 ## Réplicas Criadas e rodando 
 
-![imagem](image)
+![imagem](image.png)
