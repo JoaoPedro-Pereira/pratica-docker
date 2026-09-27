@@ -18,6 +18,8 @@ ENV NODE_ENV=production
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-EXPOSE 3001
+COPY . .
 
-CMD ["node","index.js"]
+EXPOSE 3002
+
+CMD ["npm","start"]
